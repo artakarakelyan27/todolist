@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.to-do_list{
+    padding: 20px;
+    border-radius: 8px;
+}
+.task_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+.subtask_list{
+    margin: 15px 0;
+}
+.add_task, .add_subtask {
+    cursor: pointer;
+    background: #e44332;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.add_subtask{
+    padding: 5px;
+
+}
+.task{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.add_task_container{
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+
+}
+
+.task, .subtask {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+}
+.task.completed .subtask .tools{
+    display: none;
+}
+.task.completed, .subtask.completed {
+    background: #e0e0e0;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.completed .add_subtask{
+    display: none;
+}
+.completed .edit_subtask, .completed .edit_task{
+    display: none;
+}
+.tools {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.task:hover .tools, .subtask:hover .tools{
+    opacity: 1;
+}
+.tools div {
+    cursor: pointer;
+}
+
+.task_name, .subtask_name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.task_description, .subtask_description {
+    color: #555;
+}
+
+.edit_form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.edit_form input, .edit_form textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.edit_form button, .cancel {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit_form button {
+    background: #e44332;
+    color: white;
+}
+
+.cancel {
+    background: #f5f5f5;
+    color: #444;
+    text-align: center;
+}

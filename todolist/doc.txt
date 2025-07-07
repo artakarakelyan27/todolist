@@ -1,0 +1,36 @@
+todo-list/
+├── api/                    # API-эндпоинты (контроллеры)
+│   ├── tasks.php           # Эндпоинты для задач
+│   └── subtasks.php        # Эндпоинты для подпунктов
+├── config/                 # Конфигурационные файлы
+│   ├── database.php        # Настройки подключения к БД
+│   └── routes.php          # Определение маршрутов API
+├── models/                 # Модели для работы с данными
+│   ├── Task.php            # Класс для работы с задачами
+│   └── Subtask.php         # Класс для работы с подпунктами
+├── lib/                    # Вспомогательные библиотеки и утилиты
+│   ├── Database.php        # Класс для работы с базой данных (например, PDO)
+│   └── Router.php          # Класс для маршрутизации запросов
+├── public/                 # Публичная директория (точка входа)
+│   ├── index.php           # Основной файл для обработки всех запросов
+│   ├── css/                # Стили для фронтенда
+│   ├── js/                 # JavaScript для фронтенда
+│   └── assets/             # Статические файлы (иконки, изображения)
+├── tests/                  # Тесты (если планируется тестирование)
+│   ├── TaskTest.php        # Тесты для модели задач
+│   └── SubtaskTest.php     # Тесты для модели подпунктов
+├── .env                    # Файл с переменными окружения (например, для DB)
+├── composer.json           # Зависимости PHP (если используется Composer)
+└── README.md               # Документация проекта
+
+
+object(Database)#1 (4) {
+  ["DB_HOST":"Database":private]=>
+  string(9) "localhost"
+  ["DB_USER":"Database":private]=>
+  string(4) "todo"
+  ["DB_PASS":"Database":private]=>
+  string(12) "gfhjkmjntodo"
+  ["DB_NAME":"Database":private]=>
+  string(7) "todo_bd"
+}
